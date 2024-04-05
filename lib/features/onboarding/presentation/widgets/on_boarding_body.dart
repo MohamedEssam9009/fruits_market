@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:fruits_market/core/utils/size_config.dart';
 import 'package:fruits_market/core/widgets/custom_buttons.dart';
+import 'package:fruits_market/features/onboarding/presentation/widgets/custom_page_view.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
@@ -11,6 +11,7 @@ class OnBoardingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        CustomPageView(),
         Positioned(
           top: SizeConfig.defaultSize! * 10,
           right: 32.0,

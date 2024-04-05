@@ -44,7 +44,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     SizeConfig().init(context);
     return Column(
       children: [
-        const Spacer(flex: 2),
+        const Spacer(),
         FadeTransition(
           opacity: fadingAnimation!,
           child: const Text(
@@ -58,7 +58,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
         ),
         const Spacer(),
         Image.asset('assets/images/splash_view_image.png'),
-        const Spacer(flex: 1),
       ],
     );
   }
