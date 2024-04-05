@@ -15,7 +15,7 @@ class FruitsMarket extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Fruits Market',
-      theme: ThemeData(useMaterial3: false),
+      theme: ThemeData(useMaterial3: false,fontFamily: 'Poppins'),
       home: const SplashView(),
     );
   }
