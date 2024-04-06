@@ -3,6 +3,9 @@ import 'package:fruits_market/core/utils/size_config.dart';
 import 'package:fruits_market/core/widgets/custom_buttons.dart';
 import 'package:fruits_market/features/onboarding/presentation/widgets/custom_indicator.dart';
 import 'package:fruits_market/features/onboarding/presentation/widgets/custom_page_view.dart';
+import 'package:get/get.dart';
+
+import '../../../auth/presentation/pages/login/login_view.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -58,6 +61,20 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           right: SizeConfig.defaultSize! * 10,
           bottom: SizeConfig.defaultSize! * 10,
           child: CustomGeneralButton(
+            onTap: () {
+              if (pageController!.page! < 2) {
+                pageController?.nextPage(
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn,
+                );
+              } else {
+                Get.to(
+                  () => LoginView(),
+                  transition: Transition.rightToLeft,
+                  duration: const Duration(milliseconds: 500),
+                );
+              }
+            },
             text: pageController!.hasClients
                 ? (pageController?.page == 2 ? 'Get Started' : 'Next')
                 : 'Next',
