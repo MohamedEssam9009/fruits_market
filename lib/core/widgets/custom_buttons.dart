@@ -50,7 +50,7 @@ class CustomButtonWithIcon extends StatelessWidget {
   final IconData? iconData;
   final VoidCallback? onTap;
   final Color? color;
-  
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -68,11 +68,6 @@ class CustomButtonWithIcon extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              iconData,
-              color: color,
-            ),
-            const HorizontalSpace(2),
             Text(
               text,
               style: const TextStyle(
@@ -82,6 +77,11 @@ class CustomButtonWithIcon extends StatelessWidget {
                 color: Color(0xff000000),
               ),
               textAlign: TextAlign.left,
+            ),
+            const HorizontalSpace(2),
+            Icon(
+              iconData,
+              color: color,
             ),
           ],
         ),

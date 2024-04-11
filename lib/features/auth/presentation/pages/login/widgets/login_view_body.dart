@@ -57,7 +57,7 @@ class LoginViewBody extends StatelessWidget {
                 child: CustomButtonWithIcon(
                   color: Color(0xFFdb3236),
                   iconData: FontAwesomeIcons.googlePlusG,
-                  text: 'Log in with ',
+                  text: 'Login with ',
                 ),
               ),
             ),
@@ -73,7 +73,7 @@ class LoginViewBody extends StatelessWidget {
                   },
                   color: const Color(0xFF4267B2),
                   iconData: FontAwesomeIcons.facebookF,
-                  text: 'Log in with ',
+                  text: 'Login with ',
                 ),
               ),
             )
